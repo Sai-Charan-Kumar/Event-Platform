@@ -49,6 +49,21 @@ Follow these steps to get the project running on your local machine.
 ### 1\. Download the Project
 
 Download or clone all the project files (`server.js`, `package.json`, `.html`, `.css`, `.js`) into a new directory.
+college-event-platform/
+│
+├── public/                  # Frontend files
+│   ├── index.html          # Login/Register page
+│   ├── dashboard.html      # Student dashboard
+│   ├── admin.html          # Admin dashboard
+│   ├── mytickets.html      # Student tickets page
+│   ├── attendees.html      # Admin attendees page
+│   ├── script.js           # Frontend JavaScript
+│   └── style.css           # Styles with dark mode
+│
+├── server.js               # Main server file
+├── package.json            # Dependencies
+├── .env                    # Configuration (create this)
+├── events.db               # SQLite database (auto-created)
 
 ### 2\. Install Dependencies
 
