@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Platform - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+
+        <div class="dark-mode-toggle">
+            <span>Dark Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+       <form id="login-form">
+    <h2>Login</h2>
+    <div class="form-group">
+        <label for="login-username">Username</label>
+        <input type="text" id="login-username" required>
+    </div>
+    <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required>
+    </div>
+    <button type="submit">Login</button>
+    
+    <p id="login-message" class="message"></p>
+    <p class="toggle-link">
+        Don't have an account? <a href="#" id="show-register">Register</a>
+    </p>
+</form>
+
+<form id="register-form" class="hidden">
+    <h2>Register</h2>
+    <div class="form-group">
+        <label for="reg-username">Username</label>
+        <input type="text" id="reg-username" minlength="3" required>
+        <small class="form-hint">Minimum 3 characters</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" required>
+        <small class="form-hint">OTP will be sent to this email</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" minlength="6" required>
+        <small class="form-hint">Minimum 6 characters</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="reg-role">Role</label>
+        <select id="reg-role">
+            <option value="student">Attendee</option>
+            <option value="admin">Admin (Organizer)</option>
+        </select>
+    </div>
+    
+    <!-- OTP Section (Initially Hidden) -->
+    <div id="otp-section" class="hidden">
+        <div class="otp-info-box">
+            <p>📧 A 6-digit OTP has been sent to your email.</p>
+            <p class="otp-timer">Valid for: <span id="otp-timer">5:00</span></p>
+        </div>
+        <div class="form-group">
+            <label for="reg-otp">Enter OTP</label>
+            <input type="text" id="reg-otp" maxlength="6" pattern="[0-9]{6}" placeholder="Enter 6-digit OTP">
+            <small class="form-hint">Check your email for the OTP code</small>
+        </div>
+        <button type="button" id="resend-otp-btn" class="btn-secondary" disabled>
+            Resend OTP (<span id="resend-timer">60</span>s)
+        </button>
+    </div>
+    
+    <button type="submit" id="register-submit-btn">Send OTP</button>
+    
+    <p id="register-message" class="message"></p>
+    <p class="toggle-link">
+        Already have an account? <a href="#" id="show-login">Login</a>
+    </p>
+</form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h1>My Tickets</h1>
+        <div class="user-info">
+            Welcome, <span id="username"></span>
+            <a href="/dashboard.html" class="nav-link">All Events</a>
+            <div class="dark-mode-toggle-dash">
+                <span>Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-switch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <main class="container">
+    <h2>Your Acquired Tickets</h2>
+    
+    <!-- Add this info box -->
+    <div class="email-reminder-info">
+        <div class="reminder-icon">📧</div>
+        <div class="reminder-text">
+            <strong>Automatic Email Reminders</strong>
+            <p>You'll receive an email reminder 30 minutes before each event starts at: <strong id="user-email"></strong></p>
+            <p class="reminder-note">Make sure to check your email (including spam folder) before the event!</p>
+        </div>
+    </div>
+    
+    <p>Show this page at the event. Your Ticket ID is your proof of entry.</p>
+    <div id="ticket-list" class="event-list">
+    </div>
+</main>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
