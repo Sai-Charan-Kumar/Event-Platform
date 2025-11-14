@@ -42,7 +42,7 @@ Before you begin, you will need the following installed on your machine:
 
 -----
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 Follow these steps to get the project running on your local machine.
 
